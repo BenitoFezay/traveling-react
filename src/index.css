@@ -1,13 +1,76 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Acme&family=Dancing+Script:wght@400..700&family=Dosis:wght@200..800&family=Merienda:wght@300..900&family=Quicksand:wght@300..700&family=Satisfy&display=swap");
+
+body,
+p,
+a {
+  font-family: "Quicksand", sans-serif;
+}
+a {
+  text-decoration: none !important;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+h1 {
+  font-family: "Dancing Script", sans-serif;
+}
+
+h3,
+h2 {
+  font-family: "Merienda", "Satisfy", sans-serif;
+}
+
+h4,
+h5 {
+  font-family: "Acme", sans-serif;
+}
+
+.input-color {
+  @apply placeholder-slate-700 text-slate-700 bg-slate-200;
+}
+.input-global {
+  @apply border-0 px-3 py-3 rounded-xl text-sm  outline-none w-full ease-linear transition-all duration-150;
+}
+
+.carousel {
+  background-color: #fff !important;
+}
+.carousel-indicators [data-bs-target] {
+  width: 12px !important;
+  height: 12px !important;
+  border-radius: 34% !important;
+  background-color: #d1475e !important;
+  margin: 0 4px !important;
+  transition: background-color 0.3s ease !important;
+}
+
+.carousel-indicators .active {
+  width: 17px !important;
+  background-color: #d41737 !important;
+}
+
+/* Modifier la couleur de fond des flèches */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: #d41737 !important;
+  border-radius: 34% !important;
+  padding: 12px !important;
+  width: 45px !important;
+  height: 45px !important;
+  background-size: 60% 60% !important;
+}
+
+.circuit-group .circuit-content {
+  opacity: 0;
+  transition: 0.3s ease;
+  transition-delay: 0.3s;
+  transform: translateY(100%);
+}
+.circuit-group:hover .circuit-content {
+  opacity: 1;
+  transform: translateY(0);
+  transition: 0.3s ease;
+  transition-delay: 0.3s;
 }
