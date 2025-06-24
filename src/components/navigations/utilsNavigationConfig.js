@@ -12,7 +12,7 @@ export const utilsNavigationConfig = [
     path: "/circuits",
   },
   {
-    title: "Programme",
-    path: "/program",
+    title: "Créer son voyage",
+    path: "/create-trip",
   },
 ];
