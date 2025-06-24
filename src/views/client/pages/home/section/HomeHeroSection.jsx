@@ -1,6 +1,5 @@
 import React from "react";
 
-import "bootstrap/dist/css/bootstrap.min.css";
 import Carousel from "react-bootstrap/Carousel";
 
 import SecondSlide from "../../../../../assets/images/07.webp";
@@ -31,10 +30,10 @@ const items = [
 export default function HomeHeroSection() {
   return (
     <section className="mx-auto mt-7 lg:mt-14 px-3 lg:p-4">
-      <Carousel fade className="h-full w-full rounded-3xl">
+      <Carousel fade className="h-full w-full rounded-3xl" interval={2400}>
         {items.map((item, index) => (
           <Carousel.Item key={index}>
-            <div className="bg-slate-100 rounded-3xl">
+            <div className="bg-slate-50 rounded-3xl">
               <img
                 src={item.src}
                 alt={item.altText}
