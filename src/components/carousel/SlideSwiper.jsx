@@ -12,6 +12,7 @@ import Maki from "../../assets/images/03.webp";
 import Mangily from "../../assets/images/04.webp";
 import Isalo from "../../assets/images/Isalo.webp";
 import Madagascar from "../../assets/images/Madagascar.webp";
+import CircuitDayDetails from "../../views/client/pages/circuits/CircuitDayDetails";
 
 const slides = [
   {
@@ -86,7 +87,12 @@ export default function SlideSwiper() {
           >
             {slides.map((slide, index) => (
               <SwiperSlide key={index}>
-                <Link to="#" className="group relative block bg-black">
+                <CircuitDayDetails
+                  image={slide.image}
+                  title={"Titre de sejour"}
+                  description={"Description"}
+                />
+                {/* <Link to="#" className="group relative block bg-black">
                   <img
                     alt=""
                     src={slide.image}
@@ -116,7 +122,7 @@ export default function SlideSwiper() {
                       </div>
                     </div>
                   </div>
-                </Link>
+                </Link> */}
               </SwiperSlide>
             ))}
           </Swiper>
