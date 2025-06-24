@@ -1,6 +1,5 @@
-import React, { useEffect, useState } from "react";
-import Madagascar from "../../../../../assets/images/Madagascar.webp";
-import { Link } from "react-router-dom";
+import React from "react";
+import Madagascar from "../../../../../assets/images/island.jpg";
 
 const ParallaxSection = () => {
   return (
