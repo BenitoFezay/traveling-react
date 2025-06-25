@@ -177,12 +177,18 @@ export default function IndexCircuitDetails() {
                 </div>
               </div>
 
-              <div className="mt-3\u flex justify-start lg:mt-3">
+              <div className="mt-3\u flex item-center justify-start gap-3 lg:mt-3">
                 <Link
-                  className="inline-block rounded-xl bg-rose-600 px-5 py-2 font-medium text-white shadow-sm transition-colors hover:bg-rose-700"
+                  className="inline-block rounded-xl bg-rose-600 px-4 py-2 font-medium text-white shadow-sm transition-colors hover:bg-rose-700"
                   to="#"
                 >
                   Réserver
+                </Link>
+                <Link
+                  className="inline-block rounded-xl border text-rose-600 px-3 py-2 font-medium shadow-sm"
+                  to="#"
+                >
+                  Voir sur carte
                 </Link>
               </div>
             </div>
@@ -282,6 +288,12 @@ export default function IndexCircuitDetails() {
         </div>
         {/* End Program Details */}
       </div>
+
+      {/* MAP */}
+      {/* <div className="mt-7 h-[40vh]">
+        <CircuitMap />
+      </div> */}
+      {/* END MAP */}
     </React.Fragment>
   );
 }
