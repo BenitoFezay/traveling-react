@@ -32,7 +32,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "postinstall": "flowbite-react patch && flowbite-react register"
+    "postinstall": ""
   },
   "eslintConfig": {
     "extends": [
@@ -59,6 +59,6 @@
     "react": "^19.0.0-rc.1",
     "react-dom": "^19.0.0-rc.1",
     "react-leaflet": "^5.0.0-rc.2",
-    "tailwindcss": "^3.4.17"
+    "tailwindcss": "^4.1.10"
   }
 }
