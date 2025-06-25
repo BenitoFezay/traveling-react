@@ -2,21 +2,21 @@ import React from "react";
 import PropType from "prop-types";
 
 CircuitDayPagination.propTypes = {
-  totalPosts: PropType.number,
-  postsPerPage: PropType.number,
+  totalItems: PropType.number,
+  itemsPerPage: PropType.number,
   setCurrentPage: PropType.any,
   currentPage: PropType.number,
 };
 
 export default function CircuitDayPagination({
-  totalPosts,
-  postsPerPage,
+  totalItems,
+  itemsPerPage,
   setCurrentPage,
   currentPage,
 }) {
   let pages = [];
 
-  for (let i = 1; i <= Math.ceil(totalPosts / postsPerPage); i++) {
+  for (let i = 1; i <= Math.ceil(totalItems / itemsPerPage); i++) {
     pages.push(i);
   }
 
@@ -29,8 +29,10 @@ export default function CircuitDayPagination({
               <button
                 key={index}
                 onClick={() => setCurrentPage(page)}
-                className={`p-2 w-12 h-12 text-white font-semibold rounded-xl ${
-                  page == currentPage ? "bg-rose-600" : "bg-rose-400"
+                className={`p-2 w-9 h-9 text-white font-semibold rounded-xl transition-all duration-700 ease-linear ${
+                  page == currentPage
+                    ? "bg-rose-600 flex items-center justify-center"
+                    : "bg-rose-400"
                 }`}
               >
                 {page}

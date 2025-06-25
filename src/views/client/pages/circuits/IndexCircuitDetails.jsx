@@ -17,7 +17,6 @@ import ThirdSlide from "../../../../assets/images/03.jpg";
 import Lezard from "../../../../assets/images/04.jpg";
 import SecondSlide from "../../../../assets/images/07.webp";
 import FirstSlide from "../../../../assets/images/Madagascar.webp";
-import CircuitDayDetails from "./CircuitDayDetails";
 import CircuitDayList from "./CircuitDayList";
 import CircuitDayPagination from "./CircuitDayPagination";
 
@@ -90,11 +89,11 @@ const days = [
 export default function IndexCircuitDetails() {
   const { id } = useParams();
   const [currentPage, setCurrentPage] = useState(1);
-  const [postsPerPage, setPostsPerPage] = useState(3);
+  const itemsPerPage = 3;
 
-  const lastPostIndex = currentPage * postsPerPage;
-  const firstPostIndex = lastPostIndex - postsPerPage;
-  const currentPosts = days.slice(firstPostIndex, lastPostIndex);
+  const lastItemIndex = currentPage * itemsPerPage;
+  const firstItemIndex = lastItemIndex - itemsPerPage;
+  const currentDays = days.slice(firstItemIndex, lastItemIndex);
 
   return (
     <React.Fragment>
@@ -272,12 +271,12 @@ export default function IndexCircuitDetails() {
         {/* Program Details */}
         <div className="mx-auto max-w-screen-xl px-3 mt-7">
           <div className="space-y-4">
-            <CircuitDayList dayList={currentPosts} />
+            <CircuitDayList dayList={currentDays} />
             <CircuitDayPagination
               currentPage={currentPage}
-              postsPerPage={postsPerPage}
+              itemsPerPage={itemsPerPage}
               setCurrentPage={setCurrentPage}
-              totalPosts={days.length}
+              totalItems={days.length}
             />
           </div>
         </div>
