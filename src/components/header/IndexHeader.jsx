@@ -50,8 +50,8 @@ export default function IndexHeader() {
                   <AiOutlineWhatsApp className="text-rose-600" />
                   <span>+261 34 12 334 56</span>
                 </div>
-                <RxDividerVertical />
-                <div className="lg:flex text-sm items-center gap-1 hidden sm:flex">
+                <RxDividerVertical className="hidden lg:flex" />
+                <div className="lg:flex text-sm items-center gap-1 hidden">
                   <IoIosMail className="text-rose-600" />
                   <span>mada.nomads@gmail.com</span>
                 </div>
