@@ -35,7 +35,7 @@ export default function ClientHomeSearchSection() {
             <div>
               <label htmlFor="Headline">
                 <span className="text-sm font-medium text-gray-700">
-                  Circuit
+                  Séjours
                 </span>
 
                 <select
