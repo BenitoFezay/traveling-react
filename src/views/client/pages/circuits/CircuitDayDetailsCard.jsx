@@ -1,14 +1,14 @@
 import React from "react";
 import PropType from "prop-types";
 
-CircuitDayDetails.propTypes = {
+CircuitDayDetailsCard.propTypes = {
   title: PropType.string,
   description: PropType.string,
   daily: PropType.any,
   image: PropType.any,
 };
 
-export default function CircuitDayDetails({
+export default function CircuitDayDetailsCard({
   title,
   daily,
   description,
