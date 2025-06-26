@@ -12,47 +12,41 @@ export default function ClientHomeSearchSection() {
             Trouvez votre circuit Par thème Par destination
           </p>
           <div className="grid items-end justify-center grid-cols-1 gap-4 lg:grid-cols-3 lg:gap-8">
-            <div>
-              <label htmlFor="Headline">
-                <span className="text-sm font-medium text-gray-700">Thème</span>
+            <label htmlFor="Headline">
+              <span className="text-sm font-medium text-gray-700">Thème</span>
 
-                <select
-                  name="Headline"
-                  className="mt-0.5 w-full input-global input-color"
-                >
-                  <option value="">Please select</option>
-                  <option value="JM">John Mayer</option>
-                  <option value="SRV">Stevie Ray Vaughn</option>
-                  <option value="JH">Jimi Hendrix</option>
-                  <option value="BBK">B.B King</option>
-                  <option value="AK">Albert King</option>
-                  <option value="BG">Buddy Guy</option>
-                  <option value="EC">Eric Clapton</option>
-                </select>
-              </label>
-            </div>
+              <select
+                name="Headline"
+                className="mt-0.5 input-global input-color"
+              >
+                <option value="">Please select</option>
+                <option value="JM">John Mayer</option>
+                <option value="SRV">Stevie Ray Vaughn</option>
+                <option value="JH">Jimi Hendrix</option>
+                <option value="BBK">B.B King</option>
+                <option value="AK">Albert King</option>
+                <option value="BG">Buddy Guy</option>
+                <option value="EC">Eric Clapton</option>
+              </select>
+            </label>
 
-            <div>
-              <label htmlFor="Headline">
-                <span className="text-sm font-medium text-gray-700">
-                  Séjours
-                </span>
+            <label htmlFor="Headline">
+              <span className="text-sm font-medium text-gray-700">Séjours</span>
 
-                <select
-                  name="Headline"
-                  className="mt-0.5 w-full input-global input-color"
-                >
-                  <option value="">Please select</option>
-                  <option value="JM">John Mayer</option>
-                  <option value="SRV">Stevie Ray Vaughn</option>
-                  <option value="JH">Jimi Hendrix</option>
-                  <option value="BBK">B.B King</option>
-                  <option value="AK">Albert King</option>
-                  <option value="BG">Buddy Guy</option>
-                  <option value="EC">Eric Clapton</option>
-                </select>
-              </label>
-            </div>
+              <select
+                name="Headline"
+                className="mt-0.5 w-full input-global input-color"
+              >
+                <option value="">Please select</option>
+                <option value="JM">John Mayer</option>
+                <option value="SRV">Stevie Ray Vaughn</option>
+                <option value="JH">Jimi Hendrix</option>
+                <option value="BBK">B.B King</option>
+                <option value="AK">Albert King</option>
+                <option value="BG">Buddy Guy</option>
+                <option value="EC">Eric Clapton</option>
+              </select>
+            </label>
 
             <button className="uppercase inline-block rounded-xl bg-rose-600 py-3 text-sm font-medium text-white transition hover:shadow-2xl focus:ring-3 focus:outline-hidden">
               Rechercher
