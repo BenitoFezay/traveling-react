@@ -1,42 +1,19 @@
+import PropType from "prop-types";
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 
-import { Pagination } from "swiper/modules";
+import { Autoplay, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import "swiper/css";
 import "swiper/css/pagination";
-// import "../../assets/style/App.css";
+import "../../assets/style/App.css";
 
-import Maki from "../../assets/images/03.webp";
-import Mangily from "../../assets/images/04.webp";
-import Isalo from "../../assets/images/Isalo.webp";
-import Madagascar from "../../assets/images/Madagascar.webp";
+SlideSwiper.propTypes = {
+  circuitPackages: PropType.array,
+};
 
-const slides = [
-  {
-    title: "Introduction au Projet",
-    image: Madagascar,
-  },
-  {
-    title: "Objectifs et Problématique",
-    image: Isalo,
-  },
-  {
-    title: "Architecture Technique",
-    image: Maki,
-  },
-  {
-    title: "Architecture Technique",
-    image: Mangily,
-  },
-  {
-    title: "Architecture Technique",
-    image: Isalo,
-  },
-];
-
-export default function SlideSwiper() {
+export default function SlideSwiper({ circuitPackages }) {
   const swiperWrapperRef = React.useRef(null);
 
   function adjustMargin() {
@@ -67,14 +44,20 @@ export default function SlideSwiper() {
       <main>
         <div className="container">
           <Swiper
-            modules={[Pagination]}
+            modules={[Pagination, Autoplay]}
             grabCursor
-            initialSlide={2}
+            initialSlide={0}
             centeredSlides
-            slidesPerView={4}
+            slidesPerView={1}
             speed={700}
             slideToClickedSlide
-            pagination={{ clickable: true }}
+            pagination={{
+              clickable: true,
+            }}
+            autoplay={{
+              delay: 2400,
+              disableOnInteraction: false,
+            }}
             breakpoints={{
               320: { spaceBetween: 40 },
               650: { spaceBetween: 30 },
@@ -84,35 +67,42 @@ export default function SlideSwiper() {
               swiperWrapperRef.current = swiper.wrapperEl;
             }}
           >
-            {slides.map((slide, index) => (
+            {circuitPackages.map((circuitPackage, index) => (
               <SwiperSlide key={index}>
-                <Link to="#" className="group relative block bg-black">
+                <Link
+                  key={index}
+                  to={`/circuits/${circuitPackage.slug}`}
+                  className={`group circuit-group relative circuit-group shadow-xl block bg-black rounded-3xl overflow-hidden ${
+                    index % 2 === 0 ? "lg:rotate-2" : "lg:-rotate-2"
+                  }`}
+                >
                   <img
-                    alt=""
-                    src={slide.image}
+                    alt={circuitPackage.name}
+                    src={circuitPackage.image}
                     className="absolute inset-0 h-full w-full object-cover opacity-75 transition-opacity group-hover:opacity-50"
                   />
 
                   <div className="relative p-4 sm:p-6 lg:p-8">
-                    <p className="invisible text-sm font-bold tracking-widest text-pink-800 uppercase">
-                      Maki
-                    </p>
-                    <p className="invisible text-sm font-bold tracking-widest text-pink-800 uppercase">
-                      Maki
+                    <p className="text-sm font-bold tracking-widest text-rose-600 uppercase">
+                      {circuitPackage.name}
                     </p>
 
                     <p className="text-xl font-bold text-white sm:text-2xl">
-                      Tony Wayne
+                      {circuitPackage.title}
                     </p>
 
-                    <div className="mt-32 sm:mt-48 lg:mt-64">
-                      <div className="translate-y-8 transform opacity-0 transition-all group-hover:translate-y-0 group-hover:opacity-100">
-                        <p className="text-sm text-white">
+                    <div className="mt-48 lg:mt-56">
+                      <div className="circuit-content">
+                        <p className="text-sm font-semibold text-white">
                           Lorem ipsum dolor, sit amet consectetur adipisicing
-                          elit. Omnis perferendis hic asperiores quibusdam
-                          quidem voluptates doloremque reiciendis nostrum harum.
-                          Repudiandae?
+                          elit. Repudiandae?
                         </p>
+                        <Link
+                          to={`/circuits/${circuitPackage.slug}`}
+                          className="text-slate-50 px-3 rounded-xl py-2 bg-rose-600"
+                        >
+                          Explorer
+                        </Link>
                       </div>
                     </div>
                   </div>
