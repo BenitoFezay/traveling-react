@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import RightImage from "../../../../assets/images/lemur.png";
 import LeftImage from "../../../../assets/images/lemur2.png";
 
 export default function ClientHomePresentationSection() {
@@ -12,17 +11,17 @@ export default function ClientHomePresentationSection() {
         onMouseOver={() => setIshovered(true)}
         onMouseOut={() => setIshovered(false)}
       >
-        <div className="grid grid-cols-1 gap-4 lg:grid-cols-7 lg:gap-8 overflow-hidden">
-          <div className="hidden lg:block py-7">
+        <div className="grid grid-cols-1 gap-4 lg:grid-cols-5 lg:gap-3 overflow-hidden">
+          <div className="hidden lg:block py-7 w-full">
             <img
               src={LeftImage}
               alt=""
-              className={`rotate-45 transition duration-300
+              className={`rotate-45 transition z-10 duration-300
                 ${ishovered ? "-translate-x-12" : "translate-x-3"}`}
             />
           </div>
 
-          <div className="lg:col-span-5 text-center mx-auto w-full px-3 lg:w-2/3 space-y-7">
+          <div className="lg:col-span-3 text-center mx-auto px-2 w-full lg:px-7 space-y-7">
             <h2 className="text-2xl lg:text-4xl text-gray-900/90">
               Mada Nomads
             </h2>
@@ -41,9 +40,7 @@ export default function ClientHomePresentationSection() {
             </button>
           </div>
 
-          <div className="hidden lg:block">
-            <img src={RightImage} alt="" />
-          </div>
+          <div className="invisible"></div>
         </div>
       </section>
     </React.Fragment>
