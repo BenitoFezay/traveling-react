@@ -29,19 +29,19 @@ const items = [
 
 export default function HomeHeroSection() {
   return (
-    <section className="mx-auto mt-7 lg:mt-14 px-3 lg:p-4">
-      <Carousel fade className="h-full w-full rounded-3xl" interval={2400}>
+    <section className="mx-auto mt-7 lg:mt-14 lg:p-4 lg:px-4">
+      <Carousel fade className="h-full w-full lg:rounded-3xl" interval={2400}>
         {items.map((item, index) => (
           <Carousel.Item key={index}>
-            <div className="bg-slate-50 rounded-3xl">
+            <div className="bg-slate-50 lg:rounded-3xl">
               <img
                 src={item.src}
                 alt={item.altText}
-                className="w-full h-screen rounded-3xl object-cover"
+                className="w-full h-screen lg:rounded-3xl object-cover"
               />
-              <div className="absolute rounded-3xl inset-0 bg-black/50 flex flex-col items-center justify-center text-white px-4">
-                <div className="px-4 lg:px-12 mt-12 lg:mt-7 space-y-4 text-center">
-                  <h1 className="text-3xl lg:text-7xl font-bold text-slate-100 leading-tight">
+              <div className="absolute lg:rounded-3xl inset-0 bg-black/50 flex flex-col items-center justify-center text-white px-4">
+                <div className="px-3 lg:px-12 mt-12 lg:mt-7 space-y-4 text-center">
+                  <h1 className="text-5xl lg:text-7xl font-bold text-slate-100 leading-tight">
                     Welcome to &nbsp;
                     <span className="text-rose-600">Mada Nomads</span>
                   </h1>
