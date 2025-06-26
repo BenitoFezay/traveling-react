@@ -1,10 +1,97 @@
 import React from "react";
 import LogoLarge from "../logo/LogoLarge";
+import { Link } from "react-router-dom";
 
 export default function IndexFooter() {
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+  };
+
   return (
     <React.Fragment>
-      <footer className="bg-slate-100 mt-7">
+      <footer className="bg-gray-100">
+        <div className="relative mx-auto max-w-screen-xl px-4 py-4 sm:px-6 lg:px-8 lg:pt-12">
+          <div className="absolute end-4 top-4 sm:end-6 sm:top-6 lg:end-8 lg:top-8">
+            <Link
+              onClick={scrollToTop}
+              className="inline-block rounded-full bg-rose-600 p-2 text-white shadow-sm transition hover:bg-rose-500 sm:p-3 lg:p-4"
+              to="#"
+            >
+              <span className="sr-only">Back to top</span>
+
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="size-5"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M14.707 12.707a1 1 0 01-1.414 0L10 9.414l-3.293 3.293a1 1 0 01-1.414-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 010 1.414z"
+                  clipRule="evenodd"
+                />
+              </svg>
+            </Link>
+          </div>
+
+          <div className="lg:flex lg:items-end lg:justify-between">
+            <div>
+              <div className="flex justify-center sm:justify-start">
+                <LogoLarge />
+              </div>
+
+              <p className="mx-auto font-medium mt-6 max-w-md text-start leading-relaxed text-gray-500 lg:text-left">
+                Votre porte d’entrée vers le Sud et l’Ouest sauvage de
+                Madagascar.
+              </p>
+            </div>
+
+            <ul className="mt-4 flex flex-wrap justify-center gap-6 md:gap-8 lg:mt-0 lg:justify-end lg:gap-12">
+              <li>
+                <Link
+                  className="text-slate-800 transition hover:text-slate-800/75"
+                  to="/index"
+                >
+                  Accueil
+                </Link>
+              </li>
+
+              <li>
+                <Link
+                  className="text-slate-800 transition hover:text-slate-800/75"
+                  to="/about"
+                >
+                  Qui somme-nous?
+                </Link>
+              </li>
+
+              <li>
+                <Link
+                  className="text-slate-800 transition hover:text-slate-800/75"
+                  to="/circuits"
+                >
+                  Circuits
+                </Link>
+              </li>
+
+              <li>
+                <Link
+                  className="text-slate-800 transition hover:text-slate-800/75"
+                  to="#"
+                >
+                  Contact
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          <p className="mt-4 text-start text-sm text-gray-500 lg:text-right">
+            Copyright &copy; 2022. All rights reserved.
+          </p>
+        </div>
+      </footer>
+
+      {/* <footer className="bg-slate-100 mt-7">
         <div className="mx-auto max-w-screen-xl px-4 pt-16 pb-6 sm:px-6 lg:px-8 lg:pt-24">
           <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
             <div>
@@ -19,8 +106,8 @@ export default function IndexFooter() {
 
               <ul className="mt-8 flex justify-center gap-6 sm:justify-start md:gap-8">
                 <li>
-                  <a
-                    href="#"
+                  <Link
+                    to="#"
                     rel="noreferrer"
                     target="_blank"
                     className="text-rose-600 transition hover:text-rose-600/75"
@@ -38,12 +125,12 @@ export default function IndexFooter() {
                         clipRule="evenodd"
                       />
                     </svg>
-                  </a>
+                  </Link>
                 </li>
 
                 <li>
-                  <a
-                    href="#"
+                  <Link
+                    to="#"
                     rel="noreferrer"
                     target="_blank"
                     className="text-rose-600 transition hover:text-rose-600/75"
@@ -61,12 +148,12 @@ export default function IndexFooter() {
                         clipRule="evenodd"
                       />
                     </svg>
-                  </a>
+                  </Link>
                 </li>
 
                 <li>
-                  <a
-                    href="#"
+                  <Link
+                    to="#"
                     rel="noreferrer"
                     target="_blank"
                     className="text-rose-600 transition hover:text-rose-600/75"
@@ -80,12 +167,12 @@ export default function IndexFooter() {
                     >
                       <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" />
                     </svg>
-                  </a>
+                  </Link>
                 </li>
 
                 <li>
-                  <a
-                    href="#"
+                  <Link
+                    to="#"
                     rel="noreferrer"
                     target="_blank"
                     className="text-rose-600 transition hover:text-rose-600/75"
@@ -103,12 +190,12 @@ export default function IndexFooter() {
                         clipRule="evenodd"
                       />
                     </svg>
-                  </a>
+                  </Link>
                 </li>
 
                 <li>
-                  <a
-                    href="#"
+                  <Link
+                    to="#"
                     rel="noreferrer"
                     target="_blank"
                     className="text-rose-600 transition hover:text-rose-600/75"
@@ -126,7 +213,7 @@ export default function IndexFooter() {
                         clipRule="evenodd"
                       />
                     </svg>
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -137,40 +224,40 @@ export default function IndexFooter() {
 
                 <ul className="mt-8 space-y-4 text-sm">
                   <li>
-                    <a
-                      className="text-gray-700 transition hover:text-gray-700/75"
-                      href="#"
+                    <Link
+                      className="text-slate-800 transition hover:text-slate-800/75"
+                      to="#"
                     >
                       Company History
-                    </a>
+                    </Link>
                   </li>
 
                   <li>
-                    <a
-                      className="text-gray-700 transition hover:text-gray-700/75"
-                      href="#"
+                    <Link
+                      className="text-slate-800 transition hover:text-slate-800/75"
+                      to="#"
                     >
                       Meet the Team
-                    </a>
+                    </Link>
                   </li>
 
                   <li>
-                    <a
-                      className="text-gray-700 transition hover:text-gray-700/75"
-                      href="#"
+                    <Link
+                      className="text-slate-800 transition hover:text-slate-800/75"
+                      to="#"
                     >
                       Employee Handbook
-                    </a>
+                    </Link>
                   </li>
 
                   <li>
-                    <a
-                      className="text-gray-700 transition hover:text-gray-700/75"
-                      href="#"
+                    <Link
+                      className="text-slate-800 transition hover:text-slate-800/75"
+                      to="#"
                     >
                       {" "}
                       Careers{" "}
-                    </a>
+                    </Link>
                   </li>
                 </ul>
               </div>
@@ -182,42 +269,42 @@ export default function IndexFooter() {
 
                 <ul className="mt-8 space-y-4 text-sm">
                   <li>
-                    <a
-                      className="text-gray-700 transition hover:text-gray-700/75"
-                      href="#"
+                    <Link
+                      className="text-slate-800 transition hover:text-slate-800/75"
+                      to="#"
                     >
                       Web Development
-                    </a>
+                    </Link>
                   </li>
 
                   <li>
-                    <a
-                      className="text-gray-700 transition hover:text-gray-700/75"
-                      href="#"
+                    <Link
+                      className="text-slate-800 transition hover:text-slate-800/75"
+                      to="#"
                     >
                       {" "}
                       Web Design{" "}
-                    </a>
+                    </Link>
                   </li>
 
                   <li>
-                    <a
-                      className="text-gray-700 transition hover:text-gray-700/75"
-                      href="#"
+                    <Link
+                      className="text-slate-800 transition hover:text-slate-800/75"
+                      to="#"
                     >
                       {" "}
                       Marketing{" "}
-                    </a>
+                    </Link>
                   </li>
 
                   <li>
-                    <a
-                      className="text-gray-700 transition hover:text-gray-700/75"
-                      href="#"
+                    <Link
+                      className="text-slate-800 transition hover:text-slate-800/75"
+                      to="#"
                     >
                       {" "}
                       Google Ads{" "}
-                    </a>
+                    </Link>
                   </li>
                 </ul>
               </div>
@@ -229,31 +316,31 @@ export default function IndexFooter() {
 
                 <ul className="mt-8 space-y-4 text-sm">
                   <li>
-                    <a
-                      className="text-gray-700 transition hover:text-gray-700/75"
-                      href="#"
+                    <Link
+                      className="text-slate-800 transition hover:text-slate-800/75"
+                      to="#"
                     >
                       {" "}
                       FAQs{" "}
-                    </a>
+                    </Link>
                   </li>
 
                   <li>
-                    <a
-                      className="text-gray-700 transition hover:text-gray-700/75"
-                      href="#"
+                    <Link
+                      className="text-slate-800 transition hover:text-slate-800/75"
+                      to="#"
                     >
                       {" "}
                       Support{" "}
-                    </a>
+                    </Link>
                   </li>
 
                   <li>
-                    <a
+                    <Link
                       className="group flex justify-center gap-1.5 ltr:sm:justify-start rtl:sm:justify-end"
-                      href="#"
+                      to="#"
                     >
-                      <span className="text-gray-700 transition group-hover:text-gray-700/75">
+                      <span className="text-slate-800 transition group-hover:text-slate-800/75">
                         Live Chat
                       </span>
 
@@ -261,7 +348,7 @@ export default function IndexFooter() {
                         <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-teal-400 opacity-75"></span>
                         <span className="relative inline-flex size-2 rounded-full bg-teal-500"></span>
                       </span>
-                    </a>
+                    </Link>
                   </li>
                 </ul>
               </div>
@@ -271,9 +358,9 @@ export default function IndexFooter() {
 
                 <ul className="mt-8 space-y-4 text-sm">
                   <li>
-                    <a
+                    <Link
                       className="flex items-center justify-center gap-1.5 ltr:sm:justify-start rtl:sm:justify-end"
-                      href="#"
+                      to="#"
                     >
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -290,14 +377,14 @@ export default function IndexFooter() {
                         />
                       </svg>
 
-                      <span className="flex-1 text-gray-700">john@doe.com</span>
-                    </a>
+                      <span className="flex-1 text-slate-800">john@doe.com</span>
+                    </Link>
                   </li>
 
                   <li>
-                    <a
+                    <Link
                       className="flex items-center justify-center gap-1.5 ltr:sm:justify-start rtl:sm:justify-end"
-                      href="#"
+                      to="#"
                     >
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -314,8 +401,8 @@ export default function IndexFooter() {
                         />
                       </svg>
 
-                      <span className="flex-1 text-gray-700">0123456789</span>
-                    </a>
+                      <span className="flex-1 text-slate-800">0123456789</span>
+                    </Link>
                   </li>
 
                   <li className="flex items-start justify-center gap-1.5 ltr:sm:justify-start rtl:sm:justify-end">
@@ -339,9 +426,9 @@ export default function IndexFooter() {
                       />
                     </svg>
 
-                    <address className="-mt-0.5 flex-1 text-gray-700 not-italic">
+                    <Linkddress className="-mt-0.5 flex-1 text-slate-800 not-italic">
                       213 Lane, London, United Kingdom
-                    </address>
+                    </Linkddress>
                   </li>
                 </ul>
               </div>
@@ -353,21 +440,21 @@ export default function IndexFooter() {
               <p className="text-sm text-gray-500">
                 <span className="block sm:inline">All rights reserved.</span>
 
-                <a
+                <Link
                   className="inline-block text-teal-600 underline transition hover:text-teal-600/75"
-                  href="#"
+                  to="#"
                 >
                   Terms & Conditions
-                </a>
+                </Link>
 
                 <span>&middot;</span>
 
-                <a
+                <Link
                   className="inline-block text-teal-600 underline transition hover:text-teal-600/75"
-                  href="#"
+                  to="#"
                 >
                   Privacy Policy
-                </a>
+                </Link>
               </p>
 
               <p className="mt-4 text-sm text-gray-500 sm:order-first sm:mt-0">
@@ -376,7 +463,7 @@ export default function IndexFooter() {
             </div>
           </div>
         </div>
-      </footer>
+      </footer>  */}
     </React.Fragment>
   );
 }
