@@ -6,6 +6,8 @@ import Mangily from "../../../../assets/images/07.jpg";
 import Tsingy from "../../../../assets/images/tsingy.jpg";
 import Ranomafana from "../../../../assets/images/comete.jpg";
 
+import SlideSwiper from "../../../../components/carousel/SlideSwiper";
+
 const circuitPackages = [
   {
     name: "Découverte & Nature",
@@ -41,7 +43,10 @@ export default function ClientHomeCircuitSection(args) {
   return (
     <React.Fragment>
       <section className="mx-auto mt-7 py-7 max-w-screen-2xl overflow-hidden">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-0">
+        <div className="lg:hidden block">
+          <SlideSwiper circuitPackages={circuitPackages} />
+        </div>
+        <div className="hidden lg:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-0">
           {circuitPackages.map((circuitPackage, index) => (
             <Link
               key={index}
@@ -65,7 +70,7 @@ export default function ClientHomeCircuitSection(args) {
                   {circuitPackage.title}
                 </p>
 
-                <div className="mt-32 sm:mt-52">
+                <div className="mt-48 lg:mt-56">
                   <div className="circuit-content">
                     <p className="text-sm font-semibold text-white">
                       Lorem ipsum dolor, sit amet consectetur adipisicing elit.
