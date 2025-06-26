@@ -104,7 +104,7 @@ export default function ClientIndexCircuit() {
       </div>
       <ClientHomeSearchSection />
       <div className="mx-auto max-w-screen-2xl mt-7 px-4 lg:px-7">
-        <div className="grid grid-cols-1 gap-x-4 lg:gap-x-10 lg:gap-y-12 lg:grid-cols-3">
+        <div className="grid grid-cols-1 gap-7 lg:gap-x-10 lg:gap-y-12 lg:grid-cols-3">
           {circuits.map((circuit, index) => (
             <div key={index} className="rounded">
               <Link
@@ -118,7 +118,7 @@ export default function ClientIndexCircuit() {
                 />
 
                 <div className="relative -mt-11 text-center w-2/5">
-                  <p className="text-sm font-bold tracking-widest rounded-r-xl bg-slate-950/65 py-2 text-slate-50 flex items-center justify-center">
+                  <p className="text-xs lg:text-sm font-bold tracking-widest rounded-r-xl bg-slate-950/65 py-2 text-slate-50 flex items-center justify-center">
                     À partir de &nbsp;
                     <BsCurrencyEuro />
                     {circuit?.price}
