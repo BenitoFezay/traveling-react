@@ -1,6 +1,6 @@
 :root {
   --gap: 1px;
-  --primary-color: #fff;
+  --primary-color: #d41737;
   --secondary-color: #ae3c68;
 }
 
@@ -15,7 +15,7 @@
 img {
   display: block;
   max-width: 100%;
-  height: auto;
+  height: 450px;
   object-fit: cover;
 }
 
@@ -23,8 +23,7 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100vh;
-  background: #03171d;
+  /* height: 100vh; */
   overflow: hidden;
 }
 
@@ -38,9 +37,9 @@ main {
 
 .swiper-slide {
   position: relative;
-  width: 300px;
+  width: 340px;
   background: #fff;
-  border-radius: 10px;
+  border-radius: 24px;
   box-shadow: 1px 22px 44px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   transition: 1s;
@@ -48,7 +47,7 @@ main {
 }
 
 .swiper-slide-active {
-  width: 600px;
+  width: 340px;
   transition: width 1s ease-in-out;
   border: 3px solid var(--primary-color);
 }
@@ -152,4 +151,27 @@ main {
   opacity: 1;
   transition: 0.8s ease;
   transition-delay: 1.2s;
+}
+
+/* ----- */
+.swiper-pagination {
+  position: relative !important;
+  margin-top: 18px !important;
+}
+
+.swiper-pagination-bullet {
+  background-color: var(--primary-color);
+  width: 14px !important;
+  height: 14px !important;
+  margin: 0 6px !important;
+  border-radius: 30% !important;
+  opacity: 0.7 !important;
+  transition: background-color 0.3s ease !important;
+}
+
+.swiper-pagination-bullet-active {
+  width: 19px !important;
+  opacity: 1 !important;
+  background-color: var(--primary-color) !important;
+  transform: scale(1.2) !important;
 }
