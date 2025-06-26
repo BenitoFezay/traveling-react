@@ -3,7 +3,7 @@ import Madagascar from "../../../../../assets/images/island.jpg";
 
 const ParallaxSection = () => {
   return (
-    <div className="w-full h-full">
+    <div className="w-full h-auto">
       <div className="absolute inset-0 bg-black/10 z-0"></div>
       <section
         className="h-[70vh] bg-fixed bg-center bg-cover text-white flex items-center justify-center text-3xl"
@@ -12,7 +12,7 @@ const ParallaxSection = () => {
         }}
       >
         <div className="w-full h-full bg-black/50">
-          <div className="mx-auto mt-24 text-center max-w-2xl">
+          <div className="mx-auto mt-12 text-center max-w-2xl">
             <div className="w-full flex justify-center items-center">
               <figure className="max-w-screen-md mx-auto">
                 <svg
@@ -26,10 +26,17 @@ const ParallaxSection = () => {
                     fill="currentColor"
                   ></path>
                 </svg>
-                <p className="text-xl font-medium text-gray-900 md:text-2xl dark:text-white">
-                  "Landwind is just awesome. It contains tons of predesigned
-                  components and pages starting from login screen to complex
-                  dashboard. Perfect choice for your next SaaS application."
+                <p className="text-sm font-semibold lg:text-lg text-white">
+                  Voyager avec Mada Nomads a été une expérience inoubliable. Dès
+                  notre arrivée à Antananarivo, l'équipe était là, accueillante,
+                  souriante, et toujours aux petits soins. Chaque étape de notre
+                  circuit – des Tsingy de Bemaraha aux plages paradisiaques de
+                  Nosy Be – était parfaitement organisée. Les guides étaient
+                  passionnés et connaissaient Madagascar comme leur poche. Nous
+                  avons découvert une culture riche, une nature époustouflante
+                  et des moments de partage authentiques avec la population
+                  locale. Merci à toute l’équipe de Mada Nomads pour ce voyage
+                  hors du temps. On reviendra, c’est sûr !
                 </p>
                 <figcaption className="flex items-center justify-center mt-6 space-x-3">
                   <img
