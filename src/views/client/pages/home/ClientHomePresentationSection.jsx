@@ -22,7 +22,7 @@ export default function ClientHomePresentationSection() {
             />
           </div>
 
-          <div className="lg:col-span-5 text-center mx-auto w-2/3 space-y-7">
+          <div className="lg:col-span-5 text-center mx-auto w-full px-3 lg:w-2/3 space-y-7">
             <h2 className="text-2xl lg:text-4xl text-gray-900/90">
               Mada Nomads
             </h2>
