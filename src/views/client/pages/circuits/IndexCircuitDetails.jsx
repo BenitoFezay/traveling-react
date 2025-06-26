@@ -98,10 +98,47 @@ export default function IndexCircuitDetails() {
   return (
     <React.Fragment>
       <div className="mx-auto max-w-screen-2xl mt-12">
-        <div className="grid grid-cols-1 gap-x-0 lg:gap-y-12 lg:grid-cols-2 bg-slate-200/50">
-          <div className="pt-10">
+        <div className="pt-2 grid grid-cols-1 gap-x-0 lg:gap-y-12 lg:grid-cols-2 bg-slate-200/50">
+          <div className="pt-1">
+            <Carousel fade className="w-full" interval={2400}>
+              {items.map((item, index) => (
+                <Carousel.Item key={index}>
+                  <div className="bg-slate-50">
+                    <img
+                      src={item.src}
+                      alt={item.altText}
+                      className="w-full h-1/2 object-cover"
+                    />
+                    <div className="absolute inset-0 bg-black/50 flex flex-col items-center justify-center text-white px-4">
+                      <h3 className="text-3xl font-semibold line-clamp-1">
+                        Tour Details
+                      </h3>
+                      <div className="px-3 py-1 flex items-center gap-1 justify-center bg-slate-500/65 rounded-3xl">
+                        <Link
+                          to={"/"}
+                          className="text-white hover:text-red-600"
+                        >
+                          Accueil
+                        </Link>{" "}
+                        <BsSlashLg />
+                        <Link
+                          to={"/circuits"}
+                          className="text-white hover:text-red-600"
+                        >
+                          Circuits
+                        </Link>{" "}
+                        <BsSlashLg />
+                        <span className="text-rose-600">Tour Details</span>
+                      </div>
+                    </div>
+                  </div>
+                </Carousel.Item>
+              ))}
+            </Carousel>
+          </div>
+          <div className="px-3 py-3 lg:pt-10">
             <div className="mx-auto max-w-prose text-start">
-              <h1 className="text-5xl font-bold text-slate-700">
+              <h1 className="text-4xl lg:text-5xl font-bold text-slate-700">
                 Rencontrer la forêt tropicale de Ranomafana et ses faunes
               </h1>
 
@@ -193,44 +230,6 @@ export default function IndexCircuitDetails() {
               </div>
             </div>
           </div>
-
-          <div className="pt-1">
-            <Carousel fade className="w-full" interval={2400}>
-              {items.map((item, index) => (
-                <Carousel.Item key={index}>
-                  <div className="bg-slate-50">
-                    <img
-                      src={item.src}
-                      alt={item.altText}
-                      className="w-full h-1/2 object-cover"
-                    />
-                    <div className="absolute inset-0 bg-black/50 flex flex-col items-center justify-center text-white px-4">
-                      <h3 className="text-3xl font-semibold line-clamp-1">
-                        Tour Details
-                      </h3>
-                      <div className="px-3 py-1 flex items-center gap-1 justify-center bg-slate-500/65 rounded-3xl">
-                        <Link
-                          to={"/"}
-                          className="text-white hover:text-red-600"
-                        >
-                          Accueil
-                        </Link>{" "}
-                        <BsSlashLg />
-                        <Link
-                          to={"/circuits"}
-                          className="text-white hover:text-red-600"
-                        >
-                          Circuits
-                        </Link>{" "}
-                        <BsSlashLg />
-                        <span className="text-rose-600">Tour Details</span>
-                      </div>
-                    </div>
-                  </div>
-                </Carousel.Item>
-              ))}
-            </Carousel>
-          </div>
         </div>
 
         {/* Points forts */}
@@ -247,7 +246,7 @@ export default function IndexCircuitDetails() {
               </div>
             </div>
 
-            <div className="border-y h-32 flex items-center justify-start px-3">
+            <div className="border-x lg:border-x-0 lg:border-y h-32 flex items-center justify-start px-3">
               <div>
                 <p className="flex items-center font-medium gap-x-1">
                   <BsFillCloudSunFill className="size-7 text-rose-600" />
@@ -288,12 +287,6 @@ export default function IndexCircuitDetails() {
         </div>
         {/* End Program Details */}
       </div>
-
-      {/* MAP */}
-      {/* <div className="mt-7 h-[40vh]">
-        <CircuitMap />
-      </div> */}
-      {/* END MAP */}
     </React.Fragment>
   );
 }
