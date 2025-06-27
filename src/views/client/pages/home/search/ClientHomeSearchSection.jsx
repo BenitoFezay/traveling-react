@@ -11,7 +11,7 @@ export default function ClientHomeSearchSection() {
           <p className="uppercase text-center text-gray-700/90 font-semibold my-4">
             Trouvez votre circuit Par thème Par destination
           </p>
-          <div className="grid items-end justify-center grid-cols-1 gap-4 lg:grid-cols-3 lg:gap-8">
+          <div className="grid items-end justify-center grid-cols-1 gap-4 md:grid-cols-3 lg:gap-8">
             <label htmlFor="Headline">
               <span className="text-sm font-medium text-gray-700">Thème</span>
 
