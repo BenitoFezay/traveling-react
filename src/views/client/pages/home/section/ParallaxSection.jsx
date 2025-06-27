@@ -6,15 +6,15 @@ const ParallaxSection = () => {
     <div className="w-full h-auto">
       <div className="absolute inset-0 bg-black/10 z-0"></div>
       <section
-        className="h-[70vh] bg-fixed bg-center bg-cover text-white flex items-center justify-center text-3xl"
+        className="h-[52vh] md:h-[70vh] bg-fixed bg-center bg-cover text-white flex items-center justify-center text-3xl"
         style={{
           backgroundImage: `url('${Madagascar}')`,
         }}
       >
         <div className="w-full h-full bg-black/50">
-          <div className="mx-auto mt-12 text-center max-w-2xl">
+          <div className="mx-auto mt-7 md:mt-12 text-center max-w-2xl">
             <div className="w-full flex justify-center items-center">
-              <figure className="max-w-screen-md mx-auto">
+              <figure className="max-w-screen-md mx-auto px-1">
                 <svg
                   className="h-12 mx-auto mb-3 text-rose-600"
                   viewBox="0 0 24 27"
@@ -31,7 +31,7 @@ const ParallaxSection = () => {
                   notre arrivée à Antananarivo, l'équipe était là, accueillante,
                   souriante, et toujours aux petits soins. Chaque étape de notre
                   circuit – des Tsingy de Bemaraha aux plages paradisiaques de
-                  Nosy Be – était parfaitement organisée. Les guides étaient
+                  Mangily – était parfaitement organisée. Les guides étaient
                   passionnés et connaissaient Madagascar comme leur poche. Nous
                   avons découvert une culture riche, une nature époustouflante
                   et des moments de partage authentiques avec la population
