@@ -82,7 +82,7 @@ export default function SlideSwiper({ circuitPackages }) {
                     className="absolute inset-0 h-full w-full object-cover opacity-75 transition-opacity group-hover:opacity-50"
                   />
 
-                  <div className="relative p-4 sm:p-6 lg:p-8">
+                  <div className="relative p-4 sm:p-6 lg:p-8 md:text-end">
                     <p className="text-sm font-bold tracking-widest text-rose-600 uppercase">
                       {circuitPackage.name}
                     </p>
